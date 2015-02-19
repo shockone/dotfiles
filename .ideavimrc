@@ -1,0 +1,23 @@
+set smartcase
+
+nmap <Space> \
+vmap <Space> \
+
+nmap <Leader>f $?do<CR>hi, focus: true<Esc>
+nmap <Leader>F $?focus<CR>F,dfe
+nmap <Leader>p o<Esc>0ibinding.pry<Esc>
+nmap <Leader>P O<Esc>0ibinding.pry<Esc>
+
+vmap <Leader>m "mdOputs Benchmark.measure { <CR>}<Esc>?{<CR><Esc>"mp
+
+nmap gu :action Vcs.RollbackChangedLines<CR>
+nmap gn <Esc>:action VcsShowNextChangeMarker<CR>
+nmap gp <Esc>:action VcsShowPrevChangeMarker<CR>
+nmap gr :action RenameElement<CR>i
+
+" Case aware movememts
+nmap gw :action EditorNextWordInDifferentHumpsMode<CR>
+nmap gb :action EditorPreviousWordInDifferentHumpsMode<CR>
+" Delete until the next hump.
+nmap dge :action EditorDeleteToWordEndInDifferentHumpsMode<CR>
+
